@@ -33,38 +33,32 @@ function App() {
 
   // PUBLIC_INTERFACE
   /**
-   * Fetch news articles using newapi and update state.
-   * Uses API key securely referenced here.
+   * Fetch news articles using backend proxy and update state.
+   * Frontend now sends requests to /api/news instead of direct NewsAPI.org endpoint.
    */
   const fetchNews = useCallback(async (category, searchQuery) => {
     setLoading(true);
     setError("");
-    // The API key is statically injected here as part of secure build/deployment; not exposed in client code.
-    const API_KEY = "737e634c6ef84eb4a280c96c4ec7815f";
-    // Replacing fake endpoint with NewsAPI (for proof of logic, will error if domain is CORS blocked)
-    // NOTE: If this is a demo, please supply real/working API endpoint and key.
-    // See https://newsapi.org/ for documentation.
-    const endpoint = `https://newsapi.org/v2/top-headlines` +
-      `?category=${encodeURIComponent(category.toLowerCase())}${searchQuery ? `&q=${encodeURIComponent(searchQuery)}` : ""}` +
-      `&apiKey=${API_KEY}`;
+    // Use backend proxy endpoint instead of direct NewsAPI.org endpoint.
+    // By default, backend runs on localhost:4000. Change the port as needed.
+    // The backend will append the country automatically.
+    const params = new URLSearchParams();
+    if (category) params.append("category", category.toLowerCase());
+    if (searchQuery) params.append("q", searchQuery);
+    const endpoint = `http://localhost:4000/api/news?${params.toString()}`;
 
     try {
-      // Ensure network errors and CORS are handled (catch network, CORS, API errors)
       const resp = await fetch(endpoint, {
         method: "GET",
         headers: {
-          // For public NewsAPI, this key must be in URL, so not in header; left for demonstration:
-          // "X-Api-Key": API_KEY,
+          // No need for API key or special headers; handled by backend
         },
       });
       if (!resp.ok) {
-        // Response failed from server
         throw new Error(`API error (${resp.status})`);
       }
-      // CORS errors will throw before this block!
       const data = await resp.json();
 
-      // Defensive: Sometimes NewsAPI returns { status: "error", ... }
       if (data.status && data.status !== "ok") {
         throw new Error(
           `API returned error: ${data.code || ""} ${data.message ? " - " + data.message : ""}`
@@ -84,11 +78,10 @@ function App() {
         : [];
       setNews(articles);
     } catch (e) {
-      // Diagnosing network/CORS error for debugging
       let err = "Failed to fetch news. Please try again later.";
       if (e && typeof e.message === "string") {
         if (e.message.includes("Failed to fetch")) {
-          err += " (Network/CORS error: may be due to bad endpoint, missing CORS, or no server access)";
+          err += " (Network/CORS error: is the backend running at localhost:4000?)";
         } else {
           err += ` (${e.message})`;
         }
