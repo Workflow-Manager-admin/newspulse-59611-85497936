@@ -7,271 +7,29 @@
 <i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
 <i> [webpack-dev-server] Content not from webpack is served from './public' directory
 Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-asset bundle.js 1.39 MiB [emitted] (name: main)
+asset bundle.js 1.42 MiB [emitted] (name: main)
 asset index.html 1.98 KiB [emitted]
 runtime modules 27.5 KiB 14 modules
-modules by path ./node_modules/ 1.24 MiB 31 modules
-modules by path ./src/ 10.2 KiB
-  modules by path ./src/*.css 7.49 KiB 4 modules
-  modules by path ./src/*.js 2.75 KiB
-    ./src/index.js 530 bytes [built] [code generated]
-    ./src/App.js 2.23 KiB [built] [code generated]
-modules by path ./.ve/ 15.1 KiB
-  modules by path ./.ve/*.js 10.6 KiB 2 modules
-  modules by path ./.ve/*.css 2.93 KiB
-    ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
-  ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 1267 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.4 MiB
-  asset bundle.js 1.39 MiB [emitted] (name: main)
-  asset main.7c422095a3667db7cc79.hot-update.js 7.76 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.7c422095a3667db7cc79.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.4 MiB = bundle.js 1.39 MiB main.7c422095a3667db7cc79.hot-update.js 7.76 KiB
-cached modules 1.26 MiB [cached] 41 modules
-runtime modules 27.5 KiB 14 modules
-./src/App.js 3.87 KiB [built] [code generated]
-
-ERROR in ./src/App.js 3:0-41
-Module not found: Error: Can't resolve './components/Header' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 4:0-45
-Module not found: Error: Can't resolve './components/NewsFeed' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 5:0-43
-Module not found: Error: Can't resolve './components/Sidebar' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 6:0-41
-Module not found: Error: Can't resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 7:0-39
-Module not found: Error: Can't resolve './components/Login' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-5 errors have detailed information that is not shown.
-Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
-
-webpack 5.99.9 compiled with 5 errors in 93 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.41 MiB
-  asset bundle.js 1.4 MiB [emitted] (name: main)
-  asset main.a56b843a9bcde71bccd8.hot-update.js 11.4 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.a56b843a9bcde71bccd8.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.41 MiB = bundle.js 1.4 MiB main.a56b843a9bcde71bccd8.hot-update.js 11.4 KiB
-cached modules 1.26 MiB [cached] 41 modules
-runtime modules 27.5 KiB 14 modules
-./node_modules/css-loader/dist/cjs.js!./src/App.css 8.6 KiB [built] [code generated]
-
-ERROR in ./src/App.js 3:0-41
-Module not found: Error: Can't resolve './components/Header' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 4:0-45
-Module not found: Error: Can't resolve './components/NewsFeed' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 5:0-43
-Module not found: Error: Can't resolve './components/Sidebar' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 6:0-41
-Module not found: Error: Can't resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 7:0-39
-Module not found: Error: Can't resolve './components/Login' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-5 errors have detailed information that is not shown.
-Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
-
-webpack 5.99.9 compiled with 5 errors in 69 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.42 MiB
-  asset bundle.js 1.41 MiB [emitted] (name: main)
-  asset main.410c99e2c2e99168e875.hot-update.js 12.5 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.410c99e2c2e99168e875.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.42 MiB = bundle.js 1.41 MiB main.410c99e2c2e99168e875.hot-update.js 12.5 KiB
-cached modules 1.27 MiB [cached] 41 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 6.88 KiB
-  ./src/App.js 3.87 KiB [code generated]
-  ./src/components/Header.js 3.02 KiB [built] [code generated]
-
-ERROR in ./src/App.js 4:0-45
-Module not found: Error: Can't resolve './components/NewsFeed' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 5:0-43
-Module not found: Error: Can't resolve './components/Sidebar' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 6:0-41
-Module not found: Error: Can't resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 7:0-39
-Module not found: Error: Can't resolve './components/Login' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-4 errors have detailed information that is not shown.
-Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
-
-webpack 5.99.9 compiled with 4 errors in 59 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.42 MiB
-  asset bundle.js 1.41 MiB [emitted] (name: main)
-  asset main.15418ecc337ed76ac5f7.hot-update.js 10.2 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.15418ecc337ed76ac5f7.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.42 MiB = bundle.js 1.41 MiB main.15418ecc337ed76ac5f7.hot-update.js 10.2 KiB
-cached modules 1.27 MiB [cached] 42 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 5.19 KiB
-  ./src/App.js 3.87 KiB [code generated]
-  ./src/components/Sidebar.js 1.32 KiB [built] [code generated]
-
-ERROR in ./src/App.js 4:0-45
-Module not found: Error: Can't resolve './components/NewsFeed' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 6:0-41
-Module not found: Error: Can't resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 7:0-39
-Module not found: Error: Can't resolve './components/Login' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-3 errors have detailed information that is not shown.
-Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
-
-webpack 5.99.9 compiled with 3 errors in 47 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.42 MiB
-  asset bundle.js 1.41 MiB [emitted] (name: main)
-  asset main.37d7fbe25328298e2ee4.hot-update.js 10.7 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.37d7fbe25328298e2ee4.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.42 MiB = bundle.js 1.41 MiB main.37d7fbe25328298e2ee4.hot-update.js 10.7 KiB
-cached modules 1.27 MiB [cached] 43 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 5.46 KiB
-  ./src/App.js 3.87 KiB [code generated]
-  ./src/components/NewsFeed.js 1.59 KiB [built] [code generated]
-
-ERROR in ./src/App.js 6:0-41
-Module not found: Error: Can't resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 7:0-39
-Module not found: Error: Can't resolve './components/Login' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/components/NewsFeed.js 2:0-34
-Module not found: Error: Can't resolve './NewsCard' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components'
- @ ./src/App.js 4:0-45 94:31-39
- @ ./src/index.js 5:0-24 11:32-35
-
-3 errors have detailed information that is not shown.
-Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
-
-webpack 5.99.9 compiled with 3 errors in 45 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.42 MiB
-  asset bundle.js 1.41 MiB [emitted] (name: main)
-  asset main.cd78648f0f7688f50b6d.hot-update.js 7.06 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.cd78648f0f7688f50b6d.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.42 MiB = bundle.js 1.41 MiB main.cd78648f0f7688f50b6d.hot-update.js 7.06 KiB
-cached modules 1.28 MiB [cached] 44 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 3.31 KiB
-  ./src/components/NewsFeed.js 1.59 KiB [code generated]
-  ./src/components/NewsCard.js 1.72 KiB [built] [code generated]
-
-ERROR in ./src/App.js 6:0-41
-Module not found: Error: Can't resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
-resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
-  using description file: /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/package.json (relative path: ./src)
-    Field 'browser' doesn't contain a valid alias configuration
-    using description file: /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/package.json (relative path: ./src/components/Footer)
-      no extension
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer doesn't exist
-      .js
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer.js doesn't exist
-      .jsx
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer.jsx doesn't exist
-      as directory
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer doesn't exist
- @ ./src/index.js 5:0-24 11:32-35
-
-ERROR in ./src/App.js 7:0-39
-Module not found: Error: Can't resolve './components/Login' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
-resolve './components/Login' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
-  using description file: /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/package.json (relative path: ./src)
-    Field 'browser' doesn't contain a valid alias configuration
-    using description file: /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/package.json (relative path: ./src/components/Login)
-      no extension
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Login doesn't exist
-      .js
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Login.js doesn't exist
-      .jsx
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Login.jsx doesn't exist
-      as directory
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Login doesn't exist
- @ ./src/index.js 5:0-24 11:32-35
-
-webpack 5.99.9 compiled with 2 errors in 40 ms
+cacheable modules 1.28 MiB
+  modules by path ./node_modules/ 1.24 MiB 31 modules
+  modules by path ./src/ 28.5 KiB
+    modules by path ./src/components/*.js 10.2 KiB 6 modules
+    modules by path ./src/*.css 13.9 KiB 4 modules
+    modules by path ./src/*.js 4.38 KiB
+      ./src/index.js 530 bytes [built] [code generated]
+      ./src/App.js 3.87 KiB [built] [code generated]
+  modules by path ./.ve/ 15.1 KiB
+    modules by path ./.ve/*.js 10.6 KiB 2 modules
+    modules by path ./.ve/*.css 2.93 KiB 2 modules
+    ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 1392 ms
 assets by status 1.98 KiB [cached] 1 asset
 assets by path *.js 1.43 MiB
   asset bundle.js 1.42 MiB [emitted] (name: main)
-  asset main.1f34ca6d6a2b5b5803e3.hot-update.js 11.1 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.1f34ca6d6a2b5b5803e3.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.43 MiB = bundle.js 1.42 MiB main.1f34ca6d6a2b5b5803e3.hot-update.js 11.1 KiB
-cached modules 1.28 MiB [cached] 45 modules
+  asset main.ebc0457052daa9bce827.hot-update.js 7.93 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.ebc0457052daa9bce827.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.43 MiB = bundle.js 1.42 MiB main.ebc0457052daa9bce827.hot-update.js 7.93 KiB
+cached modules 1.28 MiB [cached] 47 modules
 runtime modules 27.5 KiB 14 modules
-javascript modules 6.04 KiB
-  ./src/App.js 3.87 KiB [code generated]
-  ./src/components/Login.js 2.17 KiB [built] [code generated]
-
-ERROR in ./src/App.js 6:0-41
-Module not found: Error: Can't resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
-resolve './components/Footer' in '/home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src'
-  using description file: /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/package.json (relative path: ./src)
-    Field 'browser' doesn't contain a valid alias configuration
-    using description file: /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/package.json (relative path: ./src/components/Footer)
-      no extension
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer doesn't exist
-      .js
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer.js doesn't exist
-      .jsx
-        Field 'browser' doesn't contain a valid alias configuration
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer.jsx doesn't exist
-      as directory
-        /home/kavia/workspace/code-generation/newspulse-59611-85497936/news_pulse/src/components/Footer doesn't exist
- @ ./src/index.js 5:0-24 11:32-35
-
-webpack 5.99.9 compiled with 1 error in 41 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.43 MiB
-  asset bundle.js 1.42 MiB [emitted] (name: main)
-  asset main.28daae850b45793cf7b4.hot-update.js 8.75 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.28daae850b45793cf7b4.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.43 MiB = bundle.js 1.42 MiB main.28daae850b45793cf7b4.hot-update.js 8.75 KiB
-cached modules 1.28 MiB [cached] 46 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 4.25 KiB
-  ./src/App.js 3.87 KiB [code generated]
-  ./src/components/Footer.js 396 bytes [built] [code generated]
-webpack 5.99.9 compiled successfully in 37 ms
+./src/App.js 4.42 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 127 ms

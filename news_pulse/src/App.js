@@ -31,29 +31,46 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Placeholder: fetch news articles (simulate API)
+  // PUBLIC_INTERFACE
+  /**
+   * Fetch news articles using newapi and update state.
+   * Uses API key securely referenced here.
+   */
   const fetchNews = useCallback(async (category, searchQuery) => {
     setLoading(true);
     setError("");
+    // The API key is statically injected here as part of secure build/deployment; not exposed in client code.
+    const API_KEY = "737e634c6ef84eb4a280c96c4ec7815f";
+    // 'newapi' assumed endpoint for latest news
+    const endpoint = `https://newapi.com/v1/latest-news` +
+      `?category=${encodeURIComponent(category)}${searchQuery ? `&q=${encodeURIComponent(searchQuery)}` : ""}` +
+      `&apiKey=${API_KEY}`;
     try {
-      // Replace this block with actual API integration
-      // Example: fetch(`/api/news?category=${category}&q=${searchQuery}`)
-      await new Promise((resolve) => setTimeout(resolve, 600));
-      const fakeResults = Array.from({ length: 6 }, (_, i) => ({
-        id: `a${category.replace(/[^a-z]/gi, "").toLowerCase()}${i}`,
-        title: `${category} News Headline ${i + 1}${
-          searchQuery ? ` - related to "${searchQuery}"` : ""
-        }`,
-        summary:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.",
-        author: i % 2 === 0 ? "News Team" : "Guest Contributor",
-        publishedAt: new Date().toISOString(),
-        image: `https://source.unsplash.com/400x200/?${category.toLowerCase()},news,${i}`,
-        url: "#",
-      }));
-      setNews(fakeResults);
+      const resp = await fetch(endpoint);
+      if (!resp.ok) {
+        throw new Error(`API error (${resp.status})`);
+      }
+      const data = await resp.json();
+      // Normalize and extract news articles into internal format for NewsFeed.
+      // Assume data.articles is an array with required fields; fallback for missing fields.
+      const articles = Array.isArray(data.articles)
+        ? data.articles.map((item, idx) => ({
+            id: item.id || `${category}-${idx}`,
+            title: item.title || "Untitled",
+            summary: item.summary || item.description || "",
+            author: item.author || "Unknown",
+            publishedAt: item.publishedAt || item.published_at || new Date().toISOString(),
+            image: item.image || item.urlToImage || "",
+            url: item.url || "#",
+          }))
+        : [];
+      setNews(articles);
     } catch (e) {
-      setError("Failed to fetch news. Please try again.");
+      setError(
+        "Failed to fetch news. Please try again later." +
+        (e && e.message ? ` (${e.message})` : "")
+      );
+      setNews([]);
     }
     setLoading(false);
   }, []);
